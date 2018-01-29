@@ -1,8 +1,4 @@
 from Point import *
-<<<<<<< HEAD
-=======
-from Vecteur import *
->>>>>>> 17ca1a8265940d4f81a5a05f54bce69bda0918fc
 
 class Objet3D(object):
     """Classe definissant un objet 3D"""
@@ -25,7 +21,7 @@ class Objet3D(object):
         
     def deplacer(self, vecteur):
         """deplace les sommets et le centre de l'objet, tant ue le centre est initialise et que le vecteur herite de Vecteur"""
-        if issubclass(type(vecteur), Vecteur):
+        if issubclass(type(vecteur), Point):
             if self.__centre:
                 self.__centre.deplacer(vecteur)
             for s in self.__sommets:
