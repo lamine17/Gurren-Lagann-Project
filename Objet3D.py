@@ -1,4 +1,8 @@
 from Point import *
+<<<<<<< HEAD
+=======
+from Vecteur import *
+>>>>>>> 17ca1a8265940d4f81a5a05f54bce69bda0918fc
 
 class Objet3D(object):
     """Classe definissant un objet 3D"""
