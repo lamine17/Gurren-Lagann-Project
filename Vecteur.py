@@ -20,7 +20,7 @@ class Vecteur(Point):
             return Vecteur(self._x+vecteur._x, self._y+vecteur._y, self._z+vecteur._z)
 
     def getAngle2D(self):
-        """ Retourne l'angle du vecteur par rapport a la verticale, dans le sens trigo"""
+        """ Retourne l'angle du vecteur par rapport a la verticale, dans le sens trigo, entre pi et -pi"""
         return atan2(self._y,self._x)
     
     def diffAngle2D(self, vecteur):
@@ -28,9 +28,9 @@ class Vecteur(Point):
         if issubclass(type(vecteur), Vecteur) and vecteur:
             v=self**vecteur
             if self._y != 0 and vecteur._x != 0:
-                if v._z<0:
+                if v._z>0:
                     return -acos((self*vecteur)/(self.getNorme()*vecteur.getNorme()))
-                elif v._z>0:
+                elif v._z<0:
                     return acos((self*vecteur)/(self.getNorme()*vecteur.getNorme()))
                 else:
                     return 0
@@ -39,6 +39,7 @@ class Vecteur(Point):
     def getNorme(self):
         """Retourne la norme du vecteur """
         return sqrt(pow(self._x,2)+pow(self._y,2)+pow(self._z,2))
+    
     
     def rotation2D(self, teta):
         """tourne le vecteur d'un angle teta"""

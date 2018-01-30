@@ -2,7 +2,7 @@ from Vecteur import *
 
 #operations sur les vecteurs
 v2=Vecteur(1,0,0)
-v1=Vecteur(3,0,23)
+v1=Vecteur(300,0,0)
 print("v1 = {}, v2 = {}".format(v1, v2))
 print("v1 + v2 = {}".format(v1+v2))
 print("v1 * v2 = {}".format(v1*v2))
