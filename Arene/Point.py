@@ -34,6 +34,6 @@ class Point(object):
 
     def __add__(self, point):
         if issubclass(type(point), Point) and point:
-            return Point(self.__x+point.__x, self.__y+point.__y, self.__z+point.__z)
+            return Point(self._x+point._x, self._y+point._y, self._z+point._z)
     
         
