@@ -17,6 +17,12 @@ class Arene(object):
         #objet: Objet3D
         self.objets3D=list()
     
+   def supprimer(self, objet3D):
+        """Supprimer un objet3D dans la liste d'objets"""
+        if (issubclass(type(objet3D), Objet3D)):
+            self.objets3D.remove(objet3D)
+      
+    
     def __repr__(self):
         """Quand on entre une arene dans l'interpreteur"""
         return "Arene: objets3D({})".format(self.objets3D)
