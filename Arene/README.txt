@@ -1,8 +1,4 @@
-La branche contient:
-   - Les classes Vecteurs, Point
+Arene contient:
+   - L'arène, les objets 3D et d'autres outils de geomtrie 3D de base
    - des fontions dans fonctions.py
-   - des tests associÃ©s Ã  chaque fichier
-
-Bugs a supprimer:
-   - la methode rotation2D(self, teta) dans Vecteur.py dimunue progressivement la norme du vecteur a cause de la conversion en int lors du calcul des nouvelles coords
-     on arrive vite au vecteur nul !
+   - des tests associés à chaque fichier
