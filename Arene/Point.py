@@ -31,3 +31,9 @@ class Point(object):
     def __getattr__(self, nom):
         """Permet d'acceder a un attribut. si ce n'est pas possible:"""
         print("L'attribut {} n'est pas accessible dans Point !".format(nom))
+
+    def __add__(self, point):
+        if issubclass(type(point), Point) and point:
+            return Point(self.__x+point.__x, self.__y+point.__y, self.__z+point.__z)
+    
+        
